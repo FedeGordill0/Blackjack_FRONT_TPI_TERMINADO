@@ -1,0 +1,51 @@
+<div class="container-fluid">
+  <main>
+    <div class="posicion-boton">
+      <button type="button" (click)="salir()" class="btn btn-outline-danger button">Salir</button>
+    </div>
+
+    <section class="mesa-juego">
+
+      <section class="posicion-croupier">
+        <table class="posicion-cartas">
+          <h1 class="display" style="font-size: 25px;">Croupier</h1>
+
+          <div *ngFor="let carta of cartasCroupier">
+            <img src={{carta.imagen}}>
+          </div>
+
+
+        </table>
+      </section>
+
+      <section class="posicion-jugador">
+        <table class="posicion-cartas">
+
+          <h1 class="display" style="font-size: 25px;">Jugador</h1>
+
+          <div *ngFor="let carta of cartasJugador">
+            <img src={{carta.imagen}}>
+          </div>
+        </table>
+      </section>
+
+    </section>
+    <section #notificacionPuntaje class="notificacion">
+      <h3>
+        <h3>Jugador: {{puntosJugador}}</h3>
+        <h3>Croupier: {{puntosCroupier}}</h3>
+        <h3 class="ganador">{{resultado}}</h3>
+        <h6 class="mensaje">{{resultado2}}</h6>
+
+      </h3>
+    </section>
+    <section class="posicion-boton">
+      <button type="button" #btnPedir (click)="pedirCartaJugador('jugador')" class="boton-default">Pedir carta</button>
+      <button type="button" #btnQuedarse (click)="plantarse()" class="boton-default">Plantarse</button>
+      <button type="button" (click)="siguienteRonda()" class="boton-default">Siguiente
+        Ronda</button>
+      <button type="button" (click)="terminarJugada()" class="boton-default">Terminar
+        jugada</button>
+    </section>
+  </main>
+</div>

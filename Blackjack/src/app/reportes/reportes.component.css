@@ -1,0 +1,27 @@
+.estilo-reportes {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 35px;
+}
+h1 {
+  text-align: center;
+}
+.button {
+  position: relative;
+  left: 85%;
+  width: 120px;
+}
+.posicion-reportes {
+  height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 10px auto;
+}
+.reporte {
+  margin: 10px auto;
+  display: flex;
+  width: 250px;
+}

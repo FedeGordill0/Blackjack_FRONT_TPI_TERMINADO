@@ -1,0 +1,28 @@
+<div class="container-fluid">
+  <button class="button btn btn-outline-danger" (click)="volver()">Volver</button>
+  <h1>Reportes</h1>
+  <div class="posicion-reportes">
+    <div class="estilo-reportes">
+      <div class="reporte">
+        <canvas baseChart [type]="'pie'" [data]="cantidadJugadores">
+        </canvas>
+      </div>
+      <div class="reporte">
+        <canvas baseChart [type]="'pie'" [data]="cantidadJuegosTotal">
+        </canvas>
+      </div>
+      <div class="reporte">
+        <canvas baseChart [type]="'pie'" [data]="cantidadJuegosSinTerminar">
+        </canvas>
+      </div>
+      <div class="reporte">
+        <canvas baseChart [type]="'pie'" [data]="partidasCroupier">
+        </canvas>
+      </div>
+      <div class="reporte">
+        <canvas baseChart [type]="'pie'" [data]="cantidadPartidas21">
+        </canvas>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<form [formGroup]="formulario">
+  <h2>Registrar Usuario</h2>
+  <div class="mb-3">
+    <input required formControlName="usuario" type="text" class="form-control" placeholder="Ingresar usuario">
+  </div>
+  <div *ngIf="formulario.controls['usuario'].touched && formulario.controls['usuario'].invalid">
+    <p class="textDanger"><strong>El nombre de usuario debe tener más de 3 caracteres</strong></p>
+  </div>
+
+  <div class="mb-3">
+    <input required formControlName="clave" type="password" class="form-control" placeholder="Ingresar contraseña">
+  </div>
+  <div *ngIf="formulario.controls['clave'].touched && formulario.controls['clave'].invalid">
+    <p class="textDanger"><strong>La contraseña debe tener más de 4 caracteres</strong></p>
+  </div>
+
+  <div class="posicion-boton">
+    <button class="btn btn-success" (click)="registrarUsuario()">Registrar</button>
+  </div>
+</form>

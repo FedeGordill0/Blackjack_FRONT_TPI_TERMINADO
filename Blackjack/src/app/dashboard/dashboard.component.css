@@ -1,0 +1,27 @@
+.altura-boton {
+  position: relative;
+  top: 200px;
+}
+
+.posicion-botones {
+  display: flex;
+  position: relative;
+  justify-content: space-around;
+  align-items: center;
+}
+.img-background {
+  width: 100px;
+}
+.posicion-img {
+  position: relative;
+  top: 100px;
+  text-align: center;
+  display: flex;
+}
+img {
+  display: inline-block;
+  position: relative;
+  left: 100px;
+  width: 750px;
+  height: 270px;
+}

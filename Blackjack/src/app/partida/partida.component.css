@@ -1,0 +1,19 @@
+.tabla {
+  background-color: white;
+  border-radius: 20px;
+}
+th {
+  color: black;
+}
+* {
+  text-align: center;
+}
+.button {
+  background-image: linear-gradient(to right, #237a57 51%, #093028 100%);
+  color: white;
+}
+.button-style {
+  position: relative;
+  left: 500px;
+  width: 120px;
+}

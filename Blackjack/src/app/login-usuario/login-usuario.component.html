@@ -1,0 +1,25 @@
+<form [formGroup]="formulario" (ngSubmit)="login()">
+  <h2>Inicio de Sesión</h2>
+  <div class="mb-3">
+    <input required id="nombre" class="form-control" type="text" formControlName="usuario" placeholder="Usuario">
+  </div>
+  <div *ngIf="formulario.controls['usuario'].touched && formulario.controls['usuario'].invalid">
+    <p class="textDanger"><strong>El nombre de usuario debe tener más de 3 caracteres</strong></p>
+  </div>
+
+
+  <div class="mb-3">
+    <input required id="clave" class="form-control" type="password" formControlName="clave" placeholder="Contraseña">
+  </div>
+  <div *ngIf="formulario.controls['clave'].touched && formulario.controls['clave'].invalid">
+    <p class="textDanger"><strong>La contraseña debe tener más de 4 caracteres</strong></p>
+  </div>
+
+  <button class="btn btn-success" type="submit">Ingresar</button>
+
+
+  <a routerLink="/registrar">¿No tiene una cuenta? Cree una.</a>
+</form>
+<footer>
+  2W1 - 112059 - Gordillo Federico Agustín
+</footer>

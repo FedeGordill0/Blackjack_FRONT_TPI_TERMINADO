@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <button class="button-style btn btn-outline-danger" (click)="volver()">Volver</button>
+  <div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <table class="table tabla">
+        <thead>
+          <tr>
+            <th scope="col">Jugadas sin terminar</th>
+            <th scope=" col">Acciones</th>
+        </thead>
+        <tbody>
+          <tr *ngFor=" let jugada of listaPartidas">
+            <th scope="row">{{jugada.id_jugada}}</th>
+            <td>
+              <button type="button" class="btn button btn-outline-secondary"
+                (click)="continuar(jugada.id_jugada)">Continuar
+                Jugada</button>
+            </td>
+          </tr>
+      </table>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>
